@@ -1,0 +1,31 @@
+Week 1 Lesson 1 Homework 1
+
+Blockchain
+Discuss in your teams
+
+1. Why is client diversity important for Ethereum
+[BJ] Client diversity is important for the following reasons
+     a. Resilence to Bugs - A bug in one client implementation 
+        should not affect the whole network of nodes, if there is
+        a fair diversity in client implementations across the nodes
+        then the buggy client can be fixed while the other client
+        implmentation continue working.
+     b. Dependancy on small teams - To avoid burdening a small team 
+        of developers lets say who develop and maintain one implementation
+        of the client with all the bug fixing and related downtime.
+     c. Resilence to Attacks - An attach on one client should not bring down
+        the entire network
+     d. Problem with finality - A problem with a client should not 
+     	cause the consensus layer from reaching finality, thus leading users to not trust transcations causing major problems in dapps esp. defi.        
+
+2. Where is the full Ethereum state held ?
+[BJ] The full ethereum state is held at the data availibility layer in case of a
+     modular blockchain or in case of a monolith blockchain its held in the layer1 execution/consensus layer itself. Literaly speaking its held in the local memory of full nodes in the network, all of which is synced as part of the consensus achived. 
+
+3. What is a replay attack ? , which 2 pieces of information can prevent it ?
+[BJ] A replay attack is when the same frame or transcation is sent once more or 
+     maybe even multiple times, this causes unwanted effects. One way to avoid it to use a unique number called nonce which is used just once in a given session. Another way to avoid it is the use of timestamps.
+
+4. In a contract, how do we know who called a view function ?
+[BJ] If the function is called from another contract then the msg.sender
+	 variable in the tx data represents the caller's address, in case of a EOA it is the signers address but am not sure.
